@@ -16,16 +16,16 @@ class Visualizer{
                     network.levels.length==1
                         ?0.5
                         :i/(network.levels.length-1)
-                        );
+                );
 
             ctx.setLineDash([7,3]);
             Visualizer.drawLevel(ctx,network.levels[i],
-                                 left,levelTop,
-                                 width,levelHeight,
-                                 i==network.levels.length-1
+                left,levelTop,
+                width,levelHeight,
+                i==network.levels.length-1
                     ?['🠉','🠈','🠊','🠋']
                     :[]
-                    );
+            );
         }
     }
 
@@ -41,11 +41,11 @@ class Visualizer{
                 ctx.moveTo(
                     Visualizer.#getNodeX(inputs,i,left,right),
                     bottom
-                    );
+                );
                 ctx.lineTo(
                     Visualizer.#getNodeX(outputs,j,left,right),
                     top
-                    );
+                );
                 ctx.lineWidth=2;
                 ctx.strokeStyle=getRGBA(weights[i][j]);
                 ctx.stroke();
@@ -105,6 +105,6 @@ class Visualizer{
             nodes.length==1
                 ?0.5
                 :index/(nodes.length-1)
-                );
+        );
     }
 }

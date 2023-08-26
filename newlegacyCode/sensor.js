@@ -1,8 +1,8 @@
 class Sensor{
     constructor(car){
         this.car=car;
-        this.rayCount=5;
-        this.rayLength=150;
+        this.rayCount=7;
+        this.rayLength=140;
         this.raySpread=Math.PI/2;
 
         this.rays=[];
@@ -18,8 +18,8 @@ class Sensor{
                     this.rays[i],
                     roadBorders,
                     traffic
-                    )
-                    );
+                )
+            );
         }
     }
 
@@ -32,7 +32,7 @@ class Sensor{
                 ray[1],
                 roadBorders[i][0],
                 roadBorders[i][1]
-                );
+            );
             if(touch){
                 touches.push(touch);
             }
@@ -46,7 +46,7 @@ class Sensor{
                     ray[1],
                     poly[j],
                     poly[(j+1)%poly.length]
-                    );
+                );
                 if(value){
                     touches.push(value);
                 }
@@ -69,7 +69,7 @@ class Sensor{
                 this.raySpread/2,
                 -this.raySpread/2,
                 this.rayCount==1?0.5:i/(this.rayCount-1)
-                )+this.car.angle;
+            )+this.car.angle;
 
             const start={x:this.car.x, y:this.car.y};
             const end={
@@ -95,11 +95,11 @@ class Sensor{
             ctx.moveTo(
                 this.rays[i][0].x,
                 this.rays[i][0].y
-                );
+            );
             ctx.lineTo(
                 end.x,
                 end.y
-                );
+            );
             ctx.stroke();
 
             ctx.beginPath();
@@ -108,11 +108,11 @@ class Sensor{
             ctx.moveTo(
                 this.rays[i][1].x,
                 this.rays[i][1].y
-                );
+            );
             ctx.lineTo(
                 end.x,
                 end.y
-                );
+            );
             ctx.stroke();
         }
     }        

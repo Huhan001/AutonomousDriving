@@ -4,7 +4,7 @@ class NeuralNetwork{
         for(let i=0;i<neuronCounts.length-1;i++){
             this.levels.push(new Level(
                 neuronCounts[i],neuronCounts[i+1]
-                ));
+            ));
         }
     }
 
@@ -25,7 +25,7 @@ class NeuralNetwork{
                     level.biases[i],
                     Math.random()*2-1,
                     amount
-                    )
+                )
             }
             for(let i=0;i<level.weights.length;i++){
                 for(let j=0;j<level.weights[i].length;j++){
@@ -33,7 +33,7 @@ class NeuralNetwork{
                         level.weights[i][j],
                         Math.random()*2-1,
                         amount
-                        )
+                    )
                 }
             }
         });
