@@ -9,10 +9,10 @@ WORKDIR /app
 COPY ./ ./
 
 # Install app dependencies
-RUN npm install
+RUN npm install -g live-server
 
 # Copy the rest of the app's source code to the container
-COPY . .
+# COPY . .
 
 # Specify the command to run when the container starts
-CMD ["node", "main.js"]
+CMD ["live-server"]

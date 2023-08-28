@@ -5,7 +5,7 @@ services:
         image: myapp:1.0.0
         build: .
         ports:
-            - '3000:3000'
+            - '8080:8080'
 
         
 
