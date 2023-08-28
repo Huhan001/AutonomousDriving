@@ -16,7 +16,7 @@ spec:
         spec:
             containers:
             - name: myapp
-              image: myapp:1.0.0
+              image: ghcr.io/huhan001/autonomousdriving:1.0.0
               ports:
               - containerPort: 8080
               
