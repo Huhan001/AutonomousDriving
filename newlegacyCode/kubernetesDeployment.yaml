@@ -13,12 +13,12 @@ spec:
         metadata:
             labels:
                 app: myapp
-    spec:
-        containers:
-        - name: myapp
-        image: myapp:1.0.0
-        ports:
-            - containerPort: 8080
+        spec:
+            containers:
+            - name: myapp
+            image: myapp:1.0.0
+            ports:
+                - containerPort: 8080
               
 ---
 apiVersion: v1
