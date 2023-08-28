@@ -1,6 +1,8 @@
 # Use an official Node.js runtime as the base image
 FROM node:19-alpine
 
+LABEL org.opencontainers.image.source https://github.com/Huhan001/AutonomousDriving
+
 
 # Set the working directory inside the container
 WORKDIR /app
