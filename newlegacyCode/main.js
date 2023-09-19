@@ -33,12 +33,12 @@ const everything = () => {
 
     animate();
 
-    function save(){
+    window.save = () => {
         localStorage.setItem("bestBrain",
                              JSON.stringify(bestCar.brain));
     }
 
-    function discard(){
+    window.discard =() => {
         localStorage.removeItem("bestBrain");
     }
 
